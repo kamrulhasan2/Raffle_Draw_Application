@@ -1,5 +1,7 @@
 const router = require('express').Router();
 
+router.use('/api/v1/tickets', require('../routes/ticket'));
+
 router.get('/', (_req, res) => {
     res.send('Hello World!');
 });

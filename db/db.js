@@ -25,7 +25,7 @@ class MyDb{
 	 * @returns {Array<Ticket>}
      */
 
-     bulkCreate(user,price,quantity){
+     bulkCreate(username,price,quantity){
         const result = [];
         for(let i=0;i<quantity;i++){
             const ticket = this.create(username,price);
@@ -143,7 +143,7 @@ class MyDb{
             }
         }
 
-        const winners = winnerIndexes.map((index) => this.tickets[index];
+        const winners = winnerIndexes.map((index) => this.tickets[index]);
         
         return winners;
     }

@@ -10,8 +10,13 @@ const db = require('../db/db');
 router.route('/t/:ticketId')
     .get((req,res)=>{
         const ticketId = req.params.ticketId;
+        console.log(ticketId);
         const ticket = db.findById(ticketId);
-        res.status(200).json(ticket);
+        console.log(ticket);
+        res.status(200).json({
+            massege:"Your Ticket is :",
+            ticket
+        });
     })
     .patch((req,res)=>{
         const ticketId = req.params.ticketId;
